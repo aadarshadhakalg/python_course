@@ -136,3 +136,13 @@ print(cgpa)
 
 
 #Functions
+
+
+# Recursive FUnction
+# Recursion is a powerful programming technique where a function calls itself repeatedly until a certain condition is met.
+def count_recursive(count, limit):
+  if count < limit:
+    print(count)
+    count_recursive(count + 1, limit)
+
+count_recursive(0, 5)
