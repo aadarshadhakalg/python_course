@@ -1,4 +1,14 @@
+class Plant:
+    moves = False
+    def breathe(self):
+        print("Breathing")
+
+
+
+
+
 class Animal:
+    moves = True
     def breathe(self):
         print("Breathing")
 
@@ -19,7 +29,7 @@ animal.breathe()
 fish = Fish()
 fish.breathe()
 fish.swim()
-
+print(fish.fins)
 
 human = Human()
 human.breathe()
