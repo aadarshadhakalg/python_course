@@ -1,6 +1,7 @@
 from abc import ABC,abstractmethod
 
 #ABC = Abstract Base Class
+# A blueprint for class itself
 class Animal(ABC):
 
     def __init__(self,name):
@@ -14,7 +15,7 @@ class Animal(ABC):
         pass
 
 
-
+# Concrete Class
 class Dog(Animal):
     def make_sound(self):
         print("Barks!")
