@@ -1,0 +1,37 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}About Me{% endblock title %}</title>
+</head>
+
+<body>
+    <header>
+        <div class="top-nav container">
+            <h1 class="top-logo">Aadarsha Dhakal</h1>
+            <nav class="menu">
+                <ul class="menu-list">
+                    <li class="menu-item"><a href="{% url 'index' %}">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            {% block content %}{% endblock content %}
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 - Aadarsha Dhakal</p>
+        </div>
+    </footer>
+</body>
+
+</html>

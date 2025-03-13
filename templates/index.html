@@ -1,0 +1,13 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <img src="{{photo}}" alt="{{name}}">
+    <h1>I'm {{name}}</h1>
+    <p>{{bio}}</p>
+    {% for item in social %}
+    <a href="{{item.url}}">{{item.name}}: {{item.username}}</a>
+    {% endfor %}
+{% endblock %}
