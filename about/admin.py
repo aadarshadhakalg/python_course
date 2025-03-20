@@ -1,6 +1,14 @@
 from django.contrib import admin
 from . import models
 
-# Register your models here.
-admin.site.register(models.MyInformation)
+
+class SocialMediaInline(admin.TabularInline):
+    model = models.SocialMedia
+    extra = 3
+
+@admin.register(models.MyInformation)
+class MyInformationAdmin(admin.ModelAdmin):
+    inlines = [SocialMediaInline]
+
+
 admin.site.register(models.SocialMedia)
