@@ -13,6 +13,11 @@ body {
     width: 80%;
 }
 
+img {
+    max-width: 100%;
+    max-height: 200px;
+}
+
 header {
     background-color: #333;
     color: white;
@@ -59,6 +64,10 @@ header {
 
 .menu ul li a:hover {
     color: #eaeaea;
+}
+
+section {
+    padding: 20px 0;
 }
 
 footer {
