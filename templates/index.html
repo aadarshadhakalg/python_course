@@ -1,14 +1,16 @@
-
-{% extends 'base.html' %}
-
-{% block title %}Home{% endblock %}
+{% extends "base.html" %}
 
 {% block content %}
-    <img src="{{photo}}" alt="{{name}}"> <!-- photo is a variable passed from the view -->
-    <h1>I'm {{name|title}}</h1> {% comment %} title filter capitalizes the first letter of each word {% endcomment %}
-    <p>{{bio}}</p>
-    {% for item in social %} 
-    <a href="{{item.url}}">{{item.name}}: {{item.username}}</a>
-    {% endfor %}
+<section>
+    <div class="container my_details">
+        <img class="profile_photo" src="photo.jpg" alt="Aadarsha Dhakal">
+        <h1>I'm Aadarsha Dhakal</h1>
+        <p>Hi! Wanna know more about me? Just Google it!</p>
+        <ul>
+            <a href="https://facebook.com/aadarshadhakalg">Facebook</a>
+            <a href="https://instagram.com/aadarshadhakalg">Instagram</a>
+        </ul>
 
-{% endblock %}
+    </div>
+</section>
+{% endblock content %}
