@@ -13,3 +13,14 @@ def index(request):
         "photo": aboutme.photo.url,
     }
     return render(request, "index.html", context=context)
+
+
+def contact(request):
+    aboutme = MyInformation.objects.first()
+    context = {
+        "address": aboutme.address,
+        "phone": aboutme.phone,
+        "email": aboutme.email,
+        "map_embed_link": aboutme.map_embed_link,
+    }
+    return render(request, "contact.html", context=context)

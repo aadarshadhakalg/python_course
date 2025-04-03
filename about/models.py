@@ -8,6 +8,10 @@ class MyInformation(models.Model):
     last_name = models.CharField(max_length=255, blank=False, null=False)
     bio = models.CharField(max_length=255, blank=False, null=False)
     photo = models.ImageField(upload_to='photos/')
+    address = models.CharField(max_length=255, blank=True, null=True)
+    phone = models.CharField(max_length=20, blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
+    map_embed_link = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return f'{self.first_name}'

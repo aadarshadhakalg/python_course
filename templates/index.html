@@ -3,12 +3,13 @@
 {% block content %}
 <section>
     <div class="container my_details">
-        <img class="profile_photo" src="photo.jpg" alt="Aadarsha Dhakal">
-        <h1>I'm Aadarsha Dhakal</h1>
-        <p>Hi! Wanna know more about me? Just Google it!</p>
+        <img class="profile_photo" src="{{photo}}" alt="Aadarsha Dhakal">
+        <h1>I'm {{ name|title }}</h1>
+        <p>{{bio}}</p>
         <ul>
-            <a href="https://facebook.com/aadarshadhakalg">Facebook</a>
-            <a href="https://instagram.com/aadarshadhakalg">Instagram</a>
+            {% for item in social %}
+            <a href="{{ item.url }}">{{ item.name }}</a>
+            {% endfor %}
         </ul>
 
     </div>
