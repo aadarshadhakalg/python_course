@@ -23,19 +23,14 @@
         </div>
         <div class="contact_details">
             <h2>Contact Details</h2>
-            <p><strong>Address:</strong> Kathmandu, Nepal</p>
-            <p><strong>Phone:</strong> +977-123-4567890</p>
-            <p><strong>Email:</strong> <a href="mailto:contact@aadarshadhakal.com">contact@aadarshadhakal.com</a>
+            <p><strong>Address:</strong> {{ address }}</p>
+            <p><strong>Phone:</strong> {{ phone }}</p>
+            <p><strong>Email:</strong> <a href="mailto:{{ email }}">{{ email }}</a>
             </p>
-            <p><strong>Working Hours:</strong> Mon - Fri, 9:00 AM - 5:00 PM</p>
         </div>
     </div>
     <div class="contact_map">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.1234567890123!2d85.32456789012345!3d27.717245678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1234567890abcdef!2sYour+Location+Name!5e0!3m2!1sen!2snp!4v1234567890123"
-            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <iframe src="{{map_url|default:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23256.476396702106!2d85.26443050975116!3d27.697849214965064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19aca3d8345b%3A0xbbb5e9967c6a23e2!2sKathmandu%20BernHardt%20College!5e1!3m2!1sen!2snp!4v1743736336607!5m2!1sen!2snp"}}" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </section>
 
