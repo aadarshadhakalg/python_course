@@ -3,9 +3,8 @@
 {% block content %}
 <section>
     <div class="container blog_detail">
-        <h1>Blog Title</h1>
-        <p>Full content of the blog post goes here. This is where you can write about your thoughts, experiences, or
-            any topic you want to share with the world.</p>
+        <h1>{{blog.title}}</h1>
+        <p>{{blog.content}}</p>
     </div>
 </section>
 {% endblock content %}
