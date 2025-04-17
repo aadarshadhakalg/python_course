@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 from .models import MyInformation, SocialMedia
+from .forms import ContactMessageForm
 
 
 def index(request):
@@ -23,4 +24,14 @@ def contact(request):
         "address": aboutme.address,
         "map_url": aboutme.map_url,
     }
+
+    if request.method == "POST":
+        form = ContactMessageForm(request.POST)
+        if form.is_valid():
+            form.save()
+            context["success"] = True
+        else:   
+            context["form"] = form
+    else:
+        context["form"] = ContactMessageForm()
     return render(request, "contact.html", context=context)

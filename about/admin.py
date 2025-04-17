@@ -12,3 +12,4 @@ class MyInformationAdmin(admin.ModelAdmin):
 
 
 admin.site.register(models.SocialMedia)
+admin.site.register(models.ContactMessage)
